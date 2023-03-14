@@ -6,10 +6,10 @@ metadata:
     name: frontend
   name: frontend
 spec:
-  host: todo.apps.ocp4-mng.example.com
+  host: todo.apps.ocp4.example.com
   path: "/todo"
   to:
     kind: Service
-    name: prod-frontend
+    name: frontend-apac
     weight: 100
   wildcardPolicy: None
