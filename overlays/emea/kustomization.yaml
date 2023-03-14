@@ -2,8 +2,12 @@ kind: Kustomization
 
 bases:
   - ../../base
-resources:
-- dbclaim-pvc.yaml
-- route-mng.yaml
 
-namePrefix: prod-
+images:
+  - name: mysql
+    newName: registry.redhat.io/rhel8/mysql-80
+    newTag: 1-156
+
+nameSuffix: -emea
+resources:
+- route-mng.yaml
